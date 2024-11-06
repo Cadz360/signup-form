@@ -63,7 +63,7 @@ body {
     color: white;
 }
 
-a, a:visited {
+.sidebg-link, .sidebg-link:visited {
     color: white;
 }
 
@@ -94,12 +94,16 @@ a, a:visited {
     background-color: white;
     padding-top: 15px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     box-shadow:  5px 0.5px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .signup-footer {
     width: 100%;
+}
+
+.login-link, .login-link:visited {
+    color: black;
 }
 
 .form-container > p {
@@ -126,6 +130,35 @@ label {
 input {
     width: 250px;
     padding: 2px 5px;
+    border-radius: 4px;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0.078);
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus, input:hover {
+    border: 2px solid rgb(0, 106, 255);
+}
+
+input[type="password"]:valid {
+    border: 2px solid rgba(3, 176, 3, 0.505)
+}
+
+input[type="password"]:invalid {
+    border: 2px solid rgba(255, 0, 0, 0.522)
+}
+
+#password:invalid + p::before {
+    content: "* Passwords do not match";
+    color: red;
+    font-size: 0.9rem;
+}
+
+#password:valid + p::before {
+    content: "";
 }
 
 button {
